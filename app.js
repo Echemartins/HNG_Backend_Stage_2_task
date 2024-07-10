@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 app.use('/auth', authRoutes);
 app.use('/api/organisations', organisationRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Welcome');
+});
+
 app.use((err, req, res, next) => {
   res.status(500).json({
     status: 'error',
