@@ -11,7 +11,6 @@ const db = {};
 
 let sequelize;
 if (config.use_env_variable) {
-  console.log('Current environment:', env);
 
   console.log(process.env[config.use_env_variable])
   sequelize = new Sequelize('postgresql://postgres.figzaofpwuetulmyfbns:@Donmartins3243@aws-0-eu-central-1.pooler.supabase.com:6543/postgres', config);
